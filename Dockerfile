@@ -2,9 +2,10 @@
 FROM node:12.6.0-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN yarn
+RUN npm install -g cnpm
+RUN cnpm install
 COPY . .
-RUN yarn build
+RUN npm run build
 
 # production stage
 FROM nginx:stable-alpine as production-stage
