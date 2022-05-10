@@ -749,7 +749,7 @@ function filterMenus(target) {
 let router = new VueRouter({
   routes,
 });
-
+/**
 router.beforeEach((to, from, next) => {
   let my_cookies = document.cookie;
   let token = my_cookies && my_cookies.slice(6);
@@ -788,5 +788,6 @@ router.beforeEach((to, from, next) => {
     } else next();
   }
 });
+*/
 
 export default router;
